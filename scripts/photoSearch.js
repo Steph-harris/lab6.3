@@ -5,7 +5,7 @@ $(document).ready(function(){
     alert(userInp);
 
     var googleMapURL = "https://maps.googleapis.com/maps/api/geocode/json"
-    googleMapURL += "?address=" + $("#userAddress").val()
+    googleMapURL += "?address=" + userInp
     googleMapURL += "?key=AIzaSyAKTEVBldar7wIy2cSl-vYikXkOiW5Sxig"
 
     $.ajax({
