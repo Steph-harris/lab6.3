@@ -1,3 +1,6 @@
 $(document).ready(function(){
-  alert("done!")
-})
+  
+  $(".btn-default").on("click", function(){
+    //code goes here!
+  });
+});
