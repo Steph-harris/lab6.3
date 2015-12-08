@@ -1,8 +1,14 @@
 $(document).ready(function(){ 
+  $(".alert-warning").hide();
+
   $(".btn-default").on("click", function(e){
     e.preventDefault();
     var userInp = $("#userAddress").val();
-    alert(userInp);
+      if(userInp === "") {
+      $(".alert-warning").show();
+    }
+
+    return
 
     var googleMapURL = "https://maps.googleapis.com/maps/api/geocode/json"
     googleMapURL += "?address=" + userInp
@@ -14,7 +20,6 @@ $(document).ready(function(){
       success: googleAPISuccessHandler
     });
   });
-});
 
 	function buildThumbnail(photoData) {
 		var photoUrl = "https://farm" + photoData.farm;
@@ -36,4 +41,4 @@ $(document).ready(function(){
 		);		
 		return colDiv;
 	}
-
+});
